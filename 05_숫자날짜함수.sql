@@ -19,7 +19,7 @@ SELECT
     ABS(-34)
 FROM dual;
 
--- CEIL(올림), FLOOR(내림)
+-- CEIL(올림), FLOOR(내림) 매개값 지정X
 SELECT CEIL(3.14), FLOOR(3.14)
 FROM dual;
 

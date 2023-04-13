@@ -109,7 +109,7 @@ FROM employees;
 --이 열의 열 별칭은 salary입니다.(힌트 : lpad 이용)
 SELECT
     RPAD(SUBSTR(first_name,1,3),LENGTH(first_name),'*') AS name,
-    LOWER(RPAD(salary,10,'*')) AS salary
+    LOWER(LPAD(salary,10,'*')) AS salary
 FROM employees
 WHERE 
     LOWER(job_id) = 'it_prog'  
