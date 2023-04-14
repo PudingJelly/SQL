@@ -1,3 +1,5 @@
+
+
 -- 형 변환함수 TO_CHAR, TO_NUMBER, TO_DATE
 
 -- 날짜를 문자로 TO_CHAR(값, 형식)
@@ -32,14 +34,14 @@ FROM dual;
 SELECT TO_CHAR(20000, '99,999') 
 FROM dual;
 
--- 현재 사용하고 있는 나라의 화폐기호 표시 'L'
+-- 현재 PC기준 사용하고 있는 나라의 화폐기호 표시 'L'
 SELECT 
     TO_CHAR(salary, 'L99,999') AS salary
 FROM employees;
 
 -- 문자를 숫자로 변환 TO_NUMBER(값, 형식)
 SELECT '2000' + 2000 FROM dual; -- 자동 형변환(문자 -> 숫자)
-SELECT TO_NUMBER('2000') + 2000 FROM dual; --명시적 형 변환
+SELECT TO_NUMBER('2000') + 2000 FROM dual; -- 명시적 형 변환
 
 SELECT '$3,300' + 2000 FROM dual; -- 에러
 SELECT TO_NUMBER('$3,300', '$9,999') + 2000 FROM dual;
@@ -178,6 +180,8 @@ WHERE department_id = 50;
 
 ----------------------------------------------------------------
 
+-- DECODE는 범위를 지정할 수 없다
+-- 정확한 값을 기준으로 지정해야 정상 동작한다
 SELECT
     salary,
     employee_id,
@@ -192,10 +196,10 @@ SELECT
     ) AS grade
 FROM employees
 ORDER BY salary DESC;
--- DECODE는 범위를 지정할 수 없다
--- 정확한 값을 기준으로 지정해야 정상 동작한다
 
 
+-- case문은 범위 지정 가능
+-- 부등호도 사용 가능
 SELECT
     salary,
     employee_id,
