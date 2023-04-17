@@ -1,0 +1,28 @@
+오라클 홈피
+datebase - database Express Edition
+
+https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+11gR2
+
+Enter user-name: system
+Enter password: oracle
+Connected.
+
+SQL> ALTER USER hr ACCOUNT UNLOCK;
+User altered.
+
+SQL> conn system/oracle;
+Connected.
+
+SQL> alter user hr identified by hr;
+User altered.
+
+SQL> connect
+Enter user-name: hr
+Enter password: hr
+Connected.
+
+download
+Developer Tools
+-SQL Developer
+-included jdk11
