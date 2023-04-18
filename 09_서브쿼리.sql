@@ -182,6 +182,7 @@ FROM
     ) tbl2
 WHERE rn >10 AND rn < 20;
 
+
 SELECT * FROM 
     ( 
     SELECT
