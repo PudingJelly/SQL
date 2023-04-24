@@ -8,3 +8,6 @@ CREATE TABLE members(
     mem_age NUMBER(2),
     mem_regdate DATE DEFAULT sysdate
 );
+
+
+SELECT * FROM members;
