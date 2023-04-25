@@ -6,7 +6,7 @@
 - 쿼리문의 집합으로 어떠한 동작을 일괄 처리하기 위한 용도로 사용합니다.
 */
 
-SET SERVEROUTPUT ON; -- 출력문 활성화
+SET SERVEROUTPUT ON; -- 출력문 활성화 (아무 메세지가 없으면 정상동작 완료)
 
 DECLARE -- 변수를 선언하는 구간 (선언부)
     emp_num NUMBER; -- 변수 선언
