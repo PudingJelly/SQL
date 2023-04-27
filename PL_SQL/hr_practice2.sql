@@ -6,12 +6,16 @@ CREATE TABLE users(
     grade VARCHAR2(10) DEFAULT 'BRONZE'
 );
 
+drop table users;
+
 CREATE SEQUENCE users_seq
     START WITH 1
     INCREMENT BY 1
     MAXVALUE 100000
     NOCYCLE
     NOCACHE;
+    
+drop sequence users_seq;
     
 SELECT * FROM users;
 
