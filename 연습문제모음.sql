@@ -28,14 +28,34 @@ SELECT
 FROM employees;
 
 --6. 급여가 10000보다 큰 사원의 이름과 급여를 출력하세요.
+SELECT
+    first_name, salary
+FROM employees
+WHERE salary >= 10000;
 
 --7. 보너스를 받는 사원의 이름과 직무, 보너스율을 출력하세요.
+SELECT 
+    first_name, job_id, commission_pct
+FROM employees
+WHERE commission_pct IS NOT NULL;
 
 --8. 2003년도 입사한 사원의 이름과 입사일 그리고 급여를 출력하세요.(BETWEEN 연산자 사용)
+SELECT 
+    first_name, hire_date, salary
+FROM employees
+WHERE hire_date BETWEEN '03/01/01' AND '03/12/31';
 
 --9. 2003년도 입사한 사원의 이름과 입사일 그리고 급여를 출력하세요.(LIKE 연산자 사용)
+SELECT
+    first_name, hire_date, salary
+FROM employees
+WHERE hire_date LIKE '03%';
 
 --10. 모든 사원의 이름과 급여를 급여가 많은 사원부터 적은 사원순서로 출력하세요.
+SELECT 
+    first_name, salary
+FROM employees
+ORDER BY salary DESC;
 
 --11. 위 질의를 60번 부서의 사원에 대해서만 질의하세요. (컬럼: department_id)
 
